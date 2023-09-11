@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block content %}
+<section class="habit-list">
+{% for tracker in tracker %}
+<div class="habits">
+	<p class="habit__name" >
+	{{ tracker }}
+	</p>
+</div>
+{% endfor %}
+</section>
+{% endblock %}
