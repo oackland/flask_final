@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 </head>
 <body>
-<header>
+<header class="header">
 	<h1 class="header__logo">
 		<a href="{{ url_for('home') }}" class="header__link">
 			Tracker
@@ -19,10 +19,24 @@
 	<a href="{{ url_for('add_habit') }} " class="header__link">+ Add new</a>
 	{% endif %}
 </header>
-<h1>
+<main  class="main">
+	<section class="dates">
+		{% for date in date_range(selected_date) %}
+			<a
+					class="date__link{{ 'dates__link--current'
+					if loop.index0 == 3
+					else '' }}"
+					href="{{ url_for('home', date=date) }}"
+			>
+				<time class="date" datetime="{{ date }}">
+					<span>{{ date.strftime("%a") }}</span>
+					<span>{{ date.strftime("%d") }}</span>
+				</time>
+			</a>
+		{% endfor %}
+	</section
 	{% block content %}
-
 	{% endblock %}
-</h1>
+</main>
 </body>
 </html>

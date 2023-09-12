@@ -7,3 +7,86 @@ body{
 	box-sizing: border-box;
 	font-family: "Poppins", sans-serif;
 	}
+.header, .main{
+	max-width: 40rem;
+	margin: 0 auto;
+	padding: 1rem;
+	}
+
+.header{
+	display: flex;
+	background: #000;
+	color: #86989b;
+	justify-content: space-between;
+	align-items: center;
+	border-radius: 6px 6px 0px 0px;
+	}
+
+.header__link{
+	text-decoration: none;
+	color: inherit;
+	transition: color .1s ease-in-out;
+	}
+
+.header__link:hover{
+	text-decoration: #11557c    underline;
+	color: #11557c;
+	}
+
+.header__logo{
+	margin: 0;
+	font-size: 1.5rem;
+	}
+
+.form{
+	display: flex;
+	flex-direction: column;
+	font-size: 1.1rem;
+	}
+
+.form__input{
+	padding: 1rem;
+	font-family: inherit;
+	font-size: inherit;
+	resize: none;
+	border: 3px solid #000;
+	border-radius: 6px;
+	background-color: #fafafa;
+	margin-bottom: 1rem;
+	}
+
+.form__button{
+	font-size: inherit;
+	background-color: antiquewhite;
+	cursor: pointer;
+	border-radius: 6px;
+	border: none;
+	padding: .5rem 2.5rem;
+	align-self: flex-end;
+	}
+
+.dates{
+	display: flex;
+	justify-content: space-between;
+	color:  #000;
+	font-size: 1.1rem;
+	margin-bottom: 2.5rem;
+	}
+
+.date__link{
+	color: inherit;
+	text-decoration: none;
+	outline: none;
+	padding: 0.25rem 0.75rem;
+	border-radius: 6px;
+	}
+
+.dates__link--current{
+	background: #485f6e;
+	}
+
+.date{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	}
